@@ -11,6 +11,8 @@ namespace Demo.Tests
             var funcionario = FuncionarioFactory.Criar("Eduardo", 10000);
 
             // Assert
+            //Valida se todos os itens da coleção a habilidade não esteja nula ou vazia
+            //O Segundo parâmetro é uma action que será aplicada para todos os itens da collection
             Assert.All(funcionario.Habilidades, habilidade => Assert.False(string.IsNullOrWhiteSpace(habilidade)));
         }
 
@@ -21,6 +23,7 @@ namespace Demo.Tests
             var funcionario = FuncionarioFactory.Criar("Eduardo", 1000);
 
             // Assert
+            //Valida se a string OOP está dentro da lista de string funcionario.Habilidades
             Assert.Contains("OOP", funcionario.Habilidades);
         }
 
@@ -51,6 +54,7 @@ namespace Demo.Tests
             };
 
             // Assert
+            //Valida se as duas coleções são iguais
             Assert.Equal(habilidadesBasicas, funcionario.Habilidades);
         }
     }
