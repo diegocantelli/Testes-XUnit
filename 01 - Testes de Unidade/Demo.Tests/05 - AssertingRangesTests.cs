@@ -19,6 +19,7 @@ namespace Demo.Tests
 
             // Assert
             if (funcionario.NivelProfissional == NivelProfissional.Junior)
+                //Validando se um determinado valor está entre 500 e 1999
                 Assert.InRange(funcionario.Salario, 500, 1999);
 
             if (funcionario.NivelProfissional == NivelProfissional.Pleno)
@@ -27,6 +28,7 @@ namespace Demo.Tests
             if (funcionario.NivelProfissional == NivelProfissional.Senior)
                 Assert.InRange(funcionario.Salario, 8000, double.MaxValue);
 
+            //Validando se um determinado valor NÂO está entre 0 e 499
             Assert.NotInRange(funcionario.Salario, 0, 499);
         }
     }
