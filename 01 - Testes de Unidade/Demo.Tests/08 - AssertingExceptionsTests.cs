@@ -23,6 +23,7 @@ namespace Demo.Tests
             var exception =
                 Assert.Throws<Exception>(() => FuncionarioFactory.Criar("Eduardo", 250));
 
+            //Validando o texto da exception
             Assert.Equal("Salario inferior ao permitido", exception.Message);
         }
     }
