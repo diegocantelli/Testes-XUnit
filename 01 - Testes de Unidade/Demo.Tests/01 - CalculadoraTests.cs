@@ -20,6 +20,10 @@ namespace Demo.Tests
             Assert.Equal(4, resultado);
         }
 
+        //Theory -> É quando desejamos passar valores como parâmetro do método para testar
+        //Deve ser usado em conjunto com o InlineData, que é onde esses parâmetros são passados
+        //Os parâmetros informados no inlineData devem estar na mesma ordem daqueles utilizados no método, para não haver
+        //inconsistências no teste
         [Theory]
         [InlineData(1,1,2)]
         [InlineData(2, 2, 4)]
