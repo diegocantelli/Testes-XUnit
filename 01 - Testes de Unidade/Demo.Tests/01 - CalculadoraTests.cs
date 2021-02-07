@@ -3,7 +3,10 @@
 namespace Demo.Tests
 {
     public class CalculadoraTests
-    {
+    { 
+    
+        //Fact -> Indica que se tratade um teste unitário que não receberá parâmetros
+        //Os métodos devem ser públicos e retornarem void
         [Fact]
         public void Calculadora_Somar_RetornarValorSoma()
         {
