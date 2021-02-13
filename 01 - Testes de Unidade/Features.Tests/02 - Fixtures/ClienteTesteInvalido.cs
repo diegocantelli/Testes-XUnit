@@ -7,6 +7,7 @@ namespace Features.Tests
     {
         private readonly ClienteTestsFixture _clienteTestsFixture;
 
+        //As fixtures criadas devem ser injetadas através de injeção de dependência
         public ClienteTesteInvalido(ClienteTestsFixture clienteTestsFixture)
         {
             _clienteTestsFixture = clienteTestsFixture;
