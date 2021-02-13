@@ -2,6 +2,7 @@
 
 namespace Features.Tests
 {
+    //As classes que vão usar essa fixture, precisam ser decoradas com a collection e o nome da collection
     [Collection(nameof(ClienteCollection))]
     public class ClienteTesteInvalido
     {
