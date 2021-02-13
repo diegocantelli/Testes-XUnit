@@ -23,9 +23,13 @@ namespace Features.Tests
         {
             // Arrange
             var cliente = _clienteTestsBogus.GerarClienteValido();
+
+            //Utilizando a biblioteca Mock para gerar instâncias de classes, resolvendo automaticamente
+            // as suas dependências
             var clienteRepo = new Mock<IClienteRepository>();
             var mediatr = new Mock<IMediator>();
 
+            //A instâcia estará disponínel através da propriedade Object
             var clienteService = new ClienteService(clienteRepo.Object, mediatr.Object);
 
             // Act
