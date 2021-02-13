@@ -24,6 +24,8 @@ namespace Features.Tests
             var result = cliente.EhValido();
 
             // Assert 
+
+            //Executando 2 asserções no mesmo testes
             Assert.True(result);
             Assert.Equal(0, cliente.ValidationResult.Errors.Count);
         }
