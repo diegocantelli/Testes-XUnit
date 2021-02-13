@@ -6,7 +6,9 @@ namespace Features.Tests
 {
     public class ClienteTests
     {
+        //Com o parâmetro DisplayName é possível atribuir uma descrição mais legível para o teste
         [Fact(DisplayName = "Novo Cliente Válido")]
+        //traits -> servem para organizar os testes em categorias definidas pelo dev
         [Trait("Categoria","Cliente Trait Testes")]
         public void Cliente_NovoCliente_DeveEstarValido()
         {
