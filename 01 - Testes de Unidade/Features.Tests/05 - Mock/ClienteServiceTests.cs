@@ -41,6 +41,8 @@ namespace Features.Tests
             //Verificando se um determinado método dentro de Cliente repositório foi chamado uma vez
             clienteRepo.Verify(r => r.Adicionar(cliente),Times.Once);
 
+            //It.IsAny -> Valida se o método publish recebeu algum objeto que implementa a interface INotification
+            // e que o método Publish tenha sido chamado 1 vez
             mediatr.Verify(m=>m.Publish(It.IsAny<INotification>(),CancellationToken.None),Times.Once);
         }
 
