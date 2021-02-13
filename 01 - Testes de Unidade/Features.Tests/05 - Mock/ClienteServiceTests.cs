@@ -37,7 +37,10 @@ namespace Features.Tests
 
             // Assert
             Assert.True(cliente.EhValido());
+
+            //Verificando se um determinado método dentro de Cliente repositório foi chamado uma vez
             clienteRepo.Verify(r => r.Adicionar(cliente),Times.Once);
+
             mediatr.Verify(m=>m.Publish(It.IsAny<INotification>(),CancellationToken.None),Times.Once);
         }
 
