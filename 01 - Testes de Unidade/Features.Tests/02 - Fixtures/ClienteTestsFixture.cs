@@ -4,6 +4,7 @@ using Xunit;
 
 namespace Features.Tests
 {
+    //Dessa forma é possível reaproveitar estes métodos nas demais classes
     [CollectionDefinition(nameof(ClienteCollection))]
     public class ClienteCollection : ICollectionFixture<ClienteTestsFixture>
     {}
