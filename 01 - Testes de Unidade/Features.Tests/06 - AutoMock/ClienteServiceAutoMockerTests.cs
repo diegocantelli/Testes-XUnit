@@ -24,7 +24,11 @@ namespace Features.Tests
         {
             // Arrange
             var cliente = _clienteTestsBogus.GerarClienteValido();
+
+            //Instanciando o Automocker
             var mocker = new AutoMocker();
+
+            //Criando uma instância da classe desejada. Deve ser a classe CONCRETA passada como parâmetro;
             var clienteService = mocker.CreateInstance<ClienteService>();
 
             // Act
@@ -32,6 +36,8 @@ namespace Features.Tests
 
             // Assert
             Assert.True(cliente.EhValido());
+
+            //Obtendo mock de acordo com as interfaces
             mocker.GetMock<IClienteRepository>().Verify(r => r.Adicionar(cliente),Times.Once);
             mocker.GetMock<IMediator>().Verify(m=>m.Publish(It.IsAny<INotification>(),CancellationToken.None),Times.Once);
         }
