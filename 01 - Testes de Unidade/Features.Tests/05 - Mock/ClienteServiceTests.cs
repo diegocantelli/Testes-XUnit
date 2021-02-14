@@ -74,6 +74,8 @@ namespace Features.Tests
             var clienteRepo = new Mock<IClienteRepository>();
             var mediatr = new Mock<IMediator>();
 
+            //Setup -> Serve para indicar o que deve acontecer quando o método acionado dentro do setup for chamado
+            // Returns -> indica o que deverá ser retornado quando o método dentro do Setup for acionado
             clienteRepo.Setup(c => c.ObterTodos())
                 .Returns(_clienteTestsBogus.ObterClientesVariados());
 
